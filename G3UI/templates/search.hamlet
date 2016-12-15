@@ -6,7 +6,7 @@
   <div .row>
     <div well>
         <div .col-lg-6>
-           <form .form-horizontal  method=post>
+           <form .form-horizontal  method=post #username>
                  <div .form-group>
                  <table>
                     <tr>
