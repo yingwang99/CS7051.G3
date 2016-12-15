@@ -1,0 +1,27 @@
+$(function(){
+    --$("section.#{sectionClass}").hide();
+    --$("#mybutton").click(function(){document.location = "@{SomeRouteR}";});
+    --^{addBling}
+
+
+    var userInfo = $("#{rawJS class="userMsg"}").tr[1].val();
+    var RepoInfo = $("#{rawJS class="userMsg"}").tr[2].val();
+    if(userInfo!=null)
+    {
+      JSON.context = eval("(" + userInfo + ")");
+      JSON.RepoInfo = eval("(" + Repo + ")");
+    }
+    else
+    {
+      var userInfo <- $("#{table class="urlMsg"}").tr[1].val();
+      var RepoInfo <- $("#{table class="urlMsg"}").tr[2].val();
+      JSON.context = eval("(" + userInfo + ")");
+      JSON.RepoInfo = eval("(" + Repo + ")");
+    }
+    data: JSON.stringify({
+      message: message,
+    }),
+    alert(data);
+
+
+});

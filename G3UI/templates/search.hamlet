@@ -1,0 +1,53 @@
+
+<div .container style="background-color:#E0FFFF;">
+  <div .page-header>
+  <h1 .text-center>
+    SEARCH
+  <div .row>
+    <div well>
+        <div .col-lg-6>
+           <form .form-horizontal  method=post>
+                 <div .form-group>
+                 <table ##(userMsg) >
+                    <tr>
+                        <td>
+                         User Name:
+                     <td>
+                        <input type=Text> <br>
+                    <tr>
+                      <td>
+                        Repository Name:
+                      <td>
+                        <input type=Text>
+        <div .col-lg-6>
+                 <table ##(urlMsg)>
+                    <tr>
+                       <td>
+                        URL:
+                      <td>
+                        <input type=Text><br>
+                    <tr>
+                       <td>
+                        <input type=radio name="repoType" value="Public">Public
+                      <td>
+                        <input type=radio name="repoType"  value="Private">Private <br>
+                  <tr>
+                      <td>
+                       Token
+                       (if private):
+                    <td>
+                       <input type=Text>
+
+        <div .col-lg-12 .text-center>
+                    <button .btn.btn-primary type="submit">
+                        Add
+        <br>
+      <br>
+   <div .col-lg-12.text-center>
+              --Query:<input type=Text>
+                 <table>
+                  <tr>
+                    %select(@value options=["complexity","lines of code", "number of commits")<br>
+
+                    <button .btn.btn-primary type="submit">
+                        Submit
