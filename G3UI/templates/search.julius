@@ -15,15 +15,15 @@ $(function(){
     //}
 
     $.ajax({
-    //  url: '@{SubmitR}',
+      url: '@{SubmitR}',
       type: 'POST',
       contentType: "application/json",
       data: JSON.stringify({
-        userName:"userInfo";
-        repository:"repoInfo";
-        selectValue:"selectInfo";
-        url:urlInfo;
-        token:
+        userName: userInfo,
+        repository: repoInfo,
+        selectValue: selectInfo,
+        url: urlInfo,
+        token: xxx,
       }),
       success: function (data) {
         console.log("ajax success");
