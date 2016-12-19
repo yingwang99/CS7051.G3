@@ -1,0 +1,27 @@
+$function getData()
+{
+  $.ajax({
+    url: xxx,
+    type: 'GET',
+    contentType: "application/json",
+
+    success:
+      successFunction(data);
+    error:
+      errorFunction(data);
+    });
+});
+
+$function errorFunction(data)()
+{
+  alert("error!");
+});
+
+
+$function successFunction(data)()
+{
+
+
+
+
+});

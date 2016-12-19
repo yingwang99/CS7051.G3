@@ -8,13 +8,13 @@ $(function(){
 
     var selectInfo= $(#{rawJS selectname}").val();
 
-  //  if(userinfo=null) {
+  //  if(userinfo=null)
     //  alert("Please fill out your information first.");
       //return;
     //}
 
     $.ajax({
-      url: '@{CommentR}',
+    //  url: '@{CommentR}',
       type: 'POST',
       contentType: "application/json",
       data: JSON.stringify({
@@ -22,6 +22,7 @@ $(function(){
         repository:"repoInfo";
         selectValue:"selectInfo";
         url:urlInfo;
+        token:
       }),
       success: function (data) {
         console.log("ajax success");
