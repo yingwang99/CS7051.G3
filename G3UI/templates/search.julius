@@ -9,7 +9,7 @@ $(function(){
 
     var selectInfo= $(#{rawJS selectname}").val();
 
-  //  if(userinfo=null)
+  //  if(userInfo=null)
     //  alert("Please fill out your information first.");
       //return;
     //}
