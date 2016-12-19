@@ -15,7 +15,7 @@ $(function(){
     //}
 
     $.ajax({
-    //  url: '@{CommentR}',
+    //  url: '@{SubmitR}',
       type: 'POST',
       contentType: "application/json",
       data: JSON.stringify({
@@ -35,4 +35,3 @@ $(function(){
     });
   });
 });
-
