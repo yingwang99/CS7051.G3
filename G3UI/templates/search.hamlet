@@ -3,6 +3,8 @@
   <div .page-header>
   <h1 .text-center>
     SEARCH
+  <button .btn.btn-primary type="login">
+    LoginWithGithub
   <div .row>
     <div well>
         <div .col-lg-6>
@@ -70,10 +72,7 @@
 
               --Query:<input type=Text>
                  <table>
-                  <tr #selectname>
-                    %select(@value options=["complexity","lines of code", "number of commits", #selectname)<br>
-
-                    <button .btn.btn-primary type="submit" ##{searchAreaId}>
+                    <button .btn.btn-primary type="submit">
 
                     Query:<input type=Text>
                     <button .btn.btn-primary type="submit">

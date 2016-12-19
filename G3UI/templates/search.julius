@@ -1,3 +1,4 @@
+
 $(function(){
   $("##{rawJS searchAreaId}").submit(function(event) {
       event.preventDefault();
@@ -34,3 +35,4 @@ $(function(){
     });
   });
 });
+
