@@ -21,7 +21,4 @@ $function errorFunction(data)()
 $function successFunction(data)()
 {
 
-
-
-
 });
