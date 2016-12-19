@@ -16,6 +16,9 @@
 #  name: custom-snapshot
 #  location: "./custom-snapshot.yaml"
 resolver: lts-6.26
+compiler: ghc-7.10.3
+docker:
+  enable: false
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.

@@ -8,6 +8,17 @@ import GHC.Generics
 --import Servant
 
 
+postsubmitR :: Handler Html
+postsubmitR =
+    do defaultLayout $
+        do let (commentFormId, commentTextareaId, commentListId) = commentIds
+        aDomId <- newIdent
+        setTitle "Welcome To Yesod!"
+        $(widgetFile "search")
+
+commentIds :: (Text, Text, Text)
+commentIds = ("js-commentForm", "js-createCommentTextarea", "js-commentList")
+
 reportExceptionOr act b =  b >>= \ b' ->
   case b' of
      Left err -> putStrLn $ "Call failed with error: " ++ show err
