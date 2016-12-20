@@ -5,6 +5,6 @@
 
 / HomeR GET POST
 
-/comments CommentR POST
+/comment CommentR POST
 
-/submit submitR POST 
+/submit SubmitR POST

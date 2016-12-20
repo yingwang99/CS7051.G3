@@ -2,19 +2,12 @@
   <div .page-header>
    <h1 .text-center>
 
-   <form .form-horizontal  method=post>
+   <form .form-horizontal  method=get>
          <div .form-group>
-         <table>
-            <tr>
-              <td>
-                 url:#{a}
-              <td>
-                comlexity:#{complexity}
-              <td>
-                lines of code:#{lines of code}
-              <td>
-                No. of commits:#{number of commits}
 
+         <p>Here is the list of the search results
+         <input type=Text ##{username}> <br>
+          <ul>
 
   <div .row>
     <div well>

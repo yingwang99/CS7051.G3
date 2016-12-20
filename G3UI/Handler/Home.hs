@@ -10,6 +10,18 @@ data FileForm = FileForm
     , fileDescription :: Text
     }
 
+data JsonForm = JsonForm
+    {
+      username :: Text
+    , reponame :: Text
+    , urlname :: Text
+    , tokenname :: Maybe Text
+    , repoType :: Maybe Text
+    , queryType :: Maybe Text
+    , selectname :: Maybe Text
+
+    }
+
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
 -- config/routes
@@ -23,7 +35,7 @@ getHomeR = do
     let submission = Nothing :: Maybe FileForm
         handlerName = "getHomeR" :: Text
     defaultLayout $ do
-        let (commentFormId, commentTextareaId, commentListId) = commentIds
+        let (username, reponame, urlname, tokenname, repoType, queryType, selectname) = searchIds
         aDomId <- newIdent
         setTitle "Welcome To Yesod!"
         $(widgetFile "search")
@@ -37,7 +49,7 @@ postHomeR = do
             _ -> Nothing
 
     defaultLayout $ do
-        let (commentFormId, commentTextareaId, commentListId) = commentIds
+        let (username, reponame, urlname, tokenname, repoType, queryType, selectname) = searchIds
         aDomId <- newIdent
         setTitle "Welcome To Yesod!"
         $(widgetFile "search")
@@ -58,5 +70,8 @@ sampleForm = renderBootstrap3 BootstrapBasicForm $ FileForm
                 ]
             }
 
-commentIds :: (Text, Text, Text)
+searchIds :: (Text, Text, Text, Text, Text, Text, Text)
+searchIds = ("js-username", "js-reponame", "js-urlname","js-tokenname", "js-repoType", "js-queryType", "js-selectname")
+
+commentIds:: (Text, Text, Text)
 commentIds = ("js-commentForm", "js-createCommentTextarea", "js-commentList")

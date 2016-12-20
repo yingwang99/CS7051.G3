@@ -1,37 +1,38 @@
-
+// document.getElementById(#{toJSON aDomId}).innerHTML = "This text was added by the Javascript part of the search widget.";
 $(function(){
-  $("##{rawJS searchAreaId}").submit(function(event) {
-      event.preventDefault();
+   console.log("Hello world");
+  $("##{rawJS selectname}").click(function(event) {
+    event.preventDefault();
     var userInfo = $("##{rawJS username}").val();
     var repoInfo = $("##{rawJS reponame}").val();
     var urlInfo = $("##{rawJS urlname}").val();
-    var tokenInfo  $(##{rawJS tokenname}").val();
+    var tokenInfo = $("##{rawJS tokenname}").val();
+    var repoSelect = $("##{rawJS repoType}").val();
+    var querySelect = $("##{rawJS queryType}").val();
 
-    var selectInfo= $(#{rawJS selectname}").val();
+    var data = JSON.stringify({
+        userName: userInfo,
+        repoName: repoInfo,
+        url: urlInfo,
+        token: "xxx",
+        repoType: repoSelect,
+        queryType: querySelect,
 
-  //  if(userInfo=null)
-    //  alert("Please fill out your information first.");
-      //return;
-    //}
+      });
+
+    console.log(data);
 
     $.ajax({
-      url: '@{SubmitR}',
+      url: '@{HomeR}',
       type: 'POST',
       contentType: "application/json",
-      data: JSON.stringify({
-        userName: userInfo,
-        repository: repoInfo,
-        selectValue: selectInfo,
-        url: urlInfo,
-        token: xxx,
-      }),
+      data: data,
       success: function (data) {
         console.log("ajax success");
       },
       error: function (data) {
         console.log("Error creating comment: " + data);
       },
-
     });
   });
 });

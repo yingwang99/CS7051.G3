@@ -86,11 +86,6 @@ library
                  , time
                  , case-insensitive
                  , wai
-                 , bson
-                 , bson-generic
-                 , servant
-                 , servant-client
-                 , servant-server
 
 executable         G3UI
     if flag(library-only)
